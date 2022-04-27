@@ -262,7 +262,7 @@
                                        Rect="0,0,220,50"/>
                             </Border.Clip>
                             <Grid>
-                                <StackPanel>
+                                <StackPanel Height="50" VerticalAlignment="Bottom">
                                     <TextBlock Text="Перейти к заказу" 
                                    Foreground="Black"
                                    FontSize="22"
