@@ -2,16 +2,21 @@
 {
     public class Coffee
     {
-        public struct TypeOfCoffee
-        {
-            public string CoffeeName;
-            public short Price;
-        }
+        public string coffeeName;
+        public short price;
         public bool sugar;
-        public struct Topping
+        public bool cinnamon;
+        public bool sirop;
+        public Coffee(string coffeeName, short price, bool sugar, bool cinnamon, bool sirop)
         {
-            public string ToppingName;
-            public short Price;
+            this.coffeeName = coffeeName;
+            this.price = price;
+            this.sugar = sugar;
+            this.cinnamon = cinnamon;
+            this.sirop = sirop;
+
         }
+        
+            
     }
 }
