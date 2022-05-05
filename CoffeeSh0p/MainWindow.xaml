@@ -9,7 +9,8 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
-        AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+        FontFamily ="/Fonts/#Fira Sans">
     <Window.Resources>
         <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -47,7 +48,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Image Source="/Images/coffee-cup.png" Margin="17,17,0,17" HorizontalAlignment="Left" Width="41"/>
-            <TextBlock Text="Coffee Shop" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="22" Margin="70,0,0,0"/>
+            <TextBlock Text="Coffee Shop" VerticalAlignment="Center" HorizontalAlignment="Left" Foreground="White" FontSize="22" Margin="70,0,0,0" />
             <ContentControl Grid.Row="1" 
                             Margin="10">
                 <StackPanel Margin="10,0,0,0">
@@ -78,7 +79,7 @@
                                 </Border.Clip>
                                 <Grid>
                                     <StackPanel>
-                                        <TextBlock Text="Капучино          200 ₽" 
+                                        <TextBlock Text="Капучино                  200 ₽" 
                                    Foreground="White"
                                    FontSize="22"
                                    Margin="20,10,10,0"/>
@@ -114,7 +115,7 @@
                                 </Border.Clip>
                                 <Grid>
                                     <StackPanel>
-                                        <TextBlock Text="Капучино XL     245 ₽" 
+                                        <TextBlock Text="Капучино XL             245 ₽" 
                                    Foreground="White"
                                    FontSize="22"
                                    Margin="20,10,10,0"/>
@@ -150,7 +151,7 @@
                                 </Border.Clip>
                                 <Grid>
                                     <StackPanel>
-                                        <TextBlock Text="Латте                 200 ₽" 
+                                        <TextBlock Text="Латте                         200 ₽" 
                                    Foreground="White"
                                    FontSize="22"
                                    Margin="20,10,10,0"/>
@@ -187,7 +188,7 @@
                                 </Border.Clip>
                                 <Grid>
                                     <StackPanel>
-                                        <TextBlock Text="Латте XL            245 ₽" 
+                                        <TextBlock Text="Латте XL                    245 ₽" 
                                    Foreground="White"
                                    FontSize="22"
                                    Margin="20,10,10,0"/>
@@ -223,7 +224,7 @@
                                 </Border.Clip>
                                 <Grid>
                                     <StackPanel>
-                                        <TextBlock Text="Мокачино         205 ₽" 
+                                        <TextBlock Text="Мокачино                 205 ₽" 
                                    Foreground="White"
                                    FontSize="22"
                                    Margin="20,10,10,0"/>
@@ -259,7 +260,7 @@
                                 </Border.Clip>
                                 <Grid>
                                     <StackPanel>
-                                        <TextBlock Text="Мокачино XL    245 ₽" 
+                                        <TextBlock Text="Мокачино XL            245 ₽" 
                                    Foreground="White"
                                    FontSize="22"
                                    Margin="20,10,10,0"/>
@@ -277,7 +278,7 @@
                     <StackPanel Orientation="Horizontal" Margin="0,15,10,0" HorizontalAlignment="Right" Width="232">
                         <Button x:Name="BtnGetOrder" Height="50" Width="230" Style="{DynamicResource ButtonStyle}" Click="BtnGetOrder_Click">
 
-                            <StackPanel Orientation="Horizontal" Width="210">
+                            <StackPanel Orientation="Horizontal" Width="192">
                                 <Image Source="/Images/bag.png" Height="36" Width="36" Margin="0,0,0,0" HorizontalAlignment="Left"/>
                                 <TextBlock Text="Перейти к заказу" 
                                    Foreground="Black"

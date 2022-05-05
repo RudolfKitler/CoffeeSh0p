@@ -8,6 +8,7 @@
        xmlns:hc="https://handyorg.github.io/handycontrol"
         mc:Ignorable="d"
         Height="360" Width="825"
+    FontFamily ="/Fonts/#Fira Sans"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
@@ -79,7 +80,7 @@
                         <TextBlock Text="Вернуться" 
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="15,0,0,0" VerticalAlignment="Center" Height="27"/>
+                                   Margin="15,0,0,0" VerticalAlignment="Center" Height="20"/>
                     </StackPanel>
                 </Button>
                 <StackPanel HorizontalAlignment="Center">
@@ -112,7 +113,7 @@
                     </hc:ButtonGroup>
                     <Button Margin="0,30,0,0" Height="50" Width="230" Style="{DynamicResource ButtonStyle}">
 
-                        <StackPanel Orientation="Horizontal" Width="202">
+                        <StackPanel Orientation="Horizontal" Width="192">
                             <Image Source="/Images/coffee-cup (1).png" Height="36" Width="36" Margin="0,-3,0,0"/>
                             <TextBlock Text="Оформить заказ" 
                                    Foreground="Black"

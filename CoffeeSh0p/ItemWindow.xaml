@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CoffeeSh0p"
         mc:Ignorable="d"
         Height="660" Width="825"
+        FontFamily ="/Fonts/#Fira Sans"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
@@ -218,7 +219,7 @@
                         <TextBlock Text="Вернуться" 
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="15,0,0,0" VerticalAlignment="Center" Height="27"/>
+                                   Margin="15,0,0,0" VerticalAlignment="Center" Height="19"/>
                     </StackPanel>
                 </Button>
                 <TextBlock Text="Напитки"
@@ -381,7 +382,7 @@
             <StackPanel Orientation="Horizontal">
                 <Button x:Name="BtnAdd" Height="50" Width="208"  Margin="30,25,20,0" Click="BtnAdd_Click">
 
-                    <StackPanel Orientation="Horizontal" Width="172">
+                    <StackPanel Orientation="Horizontal" Width="160">
                         <Image Source="/Images/add-to-cart.png" Height="36" Width="36" Margin="0,0,0,0" HorizontalAlignment="Left"/>
                         <TextBlock Text="Добавить" 
                                    Foreground="Black"
@@ -392,7 +393,7 @@
                 </Button>
                 <Grid>
                     <Rectangle Fill="#1e1c2a" HorizontalAlignment="Center" Height="54" Margin="0,27,0,0" VerticalAlignment="Top" Width="155" RadiusY="27" RadiusX="27"/>
-                    <Button Name="btn_Num" Content="1" HorizontalAlignment="Center" Height="45" Margin="0,32,0,0" VerticalAlignment="Top" Width="45" Style="{DynamicResource ButtonStyle1}" Foreground="#FFF7F7F7" FontSize="20" Padding="0,-2,0,0"/>
+                    <Button Name="btn_Num" Content="1" HorizontalAlignment="Center" Height="45" Margin="0,32,0,0" VerticalAlignment="Top" Width="45" Style="{DynamicResource ButtonStyle1}" Foreground="#FFF7F7F7" FontSize="20" Padding="0,2,0,0"/>
                     <Button Name="btn_MinNum" Content="___" HorizontalAlignment="Left" Height="36" Margin="10,36,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource ButtonStyle2}" Foreground="White" FontSize="11" FontWeight="Bold" FontFamily="Segoe UI Black" Click="btn_MinNum_Click"/>
                     <Button Name="btn_PlusNum" Content="+" HorizontalAlignment="Left" Height="36" Margin="108,36,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource ButtonStyle3}" Foreground="White" FontSize="18" Click="btn_PlusNum_Click"/>
                 </Grid>
