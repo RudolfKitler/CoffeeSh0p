@@ -1,0 +1,22 @@
+﻿<Window x:Class="CoffeeSh0p.ResponseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeeSh0p"
+        mc:Ignorable="d"
+        Height="280" Width="425"
+    FontFamily ="/Fonts/#Fira Sans"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,36,0,0">
+        <Border Background="#272537" CornerRadius="20" Width="400" Height="200" Margin="12,-22,13,66">
+            <TextBlock Name="ResponseView" FontSize="28" VerticalAlignment="Top" Foreground="White" TextAlignment="Center" Margin="0,60,0,0"/>
+        </Border>
+        <Button Name="BtnOK" Margin="0,129,0,0" Width="106" Height="95" Background="Transparent" BorderThickness="0" VerticalAlignment="Top" Click="BtnOK_Click">
+            <Image Source="/Images/correct (1).png"/>
+        </Button>
+    </Grid>
+</Window>

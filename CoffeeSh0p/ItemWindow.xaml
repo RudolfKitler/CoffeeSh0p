@@ -5,40 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CoffeeSh0p"
         mc:Ignorable="d"
-        Height="660" Width="825"
+        Height="646" Width="825"
+        FontFamily ="/Fonts/#Fira Sans"
         WindowStyle="None"
         ResizeMode="NoResize"
         Background="Transparent"
         AllowsTransparency="True" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Border x:Name="border" Background="#c4c1d6" BorderThickness="0">
-                            <Border.Effect>
-                                <DropShadowEffect BlurRadius="7" Direction="330" Color="Gray" ShadowDepth="4" Opacity="0.3"></DropShadowEffect>
-                            </Border.Effect>
-                            <ContentPresenter x:Name="cp" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" TextBlock.Foreground="Black" TextBlock.FontSize="20"></ContentPresenter>
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="border" Property="Background" Value="#E0F2F1"></Setter>
-                                <Setter TargetName="cp" Property="TextBlock.Foreground" Value="Gray"></Setter>
-                            </Trigger>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="#9694a4"></Setter>
-                                <Setter TargetName="cp" Property="TextBlock.Foreground" Value="Black"></Setter>
-                            </Trigger>
-                            <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="#686671"></Setter>
-                                <Setter TargetName="cp" Property="TextBlock.Foreground" Value="White"></Setter>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
+
 
         <Style x:Key="BackButton" TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -56,11 +30,11 @@
                                 <Setter TargetName="cp" Property="TextBlock.Foreground" Value="Gray"></Setter>
                             </Trigger>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="#9694a4"></Setter>
+                                <Setter TargetName="border" Property="Background" Value="#15141e"></Setter>
                                 <Setter TargetName="cp" Property="TextBlock.Foreground" Value="Black"></Setter>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="#686671"></Setter>
+                                <Setter TargetName="border" Property="Background" Value="#050507"></Setter>
                                 <Setter TargetName="cp" Property="TextBlock.Foreground" Value="White"></Setter>
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -211,14 +185,14 @@
     <Border Background="#272537" CornerRadius="20">
         <StackPanel Margin="10,0,0,0">
             <Grid Margin="0,30,0,0">
-                <Button x:Name="BtnBack" Width="150" Margin="30,10,0,40" Height="38" HorizontalAlignment="Left" Style="{DynamicResource BackButton}" Click="BtnBack_Click">
+                <Button x:Name="BtnBack" Width="150" Margin="30,10,0,40" Height="38" HorizontalAlignment="Left" Background="#1e1c2a" BorderThickness="0" Click="BtnBack_Click">
 
                     <StackPanel Orientation="Horizontal" Width="129">
                         <Image Source="/Images/back.png" Height="25" Width="25" Margin="0,0,0,0"/>
                         <TextBlock Text="Вернуться" 
                                    Foreground="White"
                                    FontSize="18"
-                                   Margin="15,0,0,0" VerticalAlignment="Center" Height="27"/>
+                                   Margin="15,0,0,0" VerticalAlignment="Center" Height="22"/>
                     </StackPanel>
                 </Button>
                 <TextBlock Text="Напитки"
@@ -234,12 +208,12 @@
                    Margin="0,0,0,0" Name="drink"/>
             </Grid>
             <Image Margin="0,0,0,0" Height="253" Width="486" Name="picture"/>
-            <ToggleButton Name="sugar" Height="50" Width="250" HorizontalAlignment="Left" Margin="50,15,0,0" Content="Сахар" Foreground="White" FontSize="23">
+            <ToggleButton Name="ToggleSugar" Height="50" Width="250" HorizontalAlignment="Left" Margin="50,15,0,0" Content="Сахар" Foreground="White" FontSize="23">
                 <ToggleButton.Template>
                     <ControlTemplate TargetType="{x:Type ToggleButton}">
                         <StackPanel Orientation="Horizontal">
                             <Border Height="35" Width="35" CornerRadius="4" HorizontalAlignment="Left"
-                        BorderThickness="1" Background="#1e1c2a">
+                                    BorderThickness="1" Background="#1e1c2a">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="BorderBrush" Value="#FF333842"/>
@@ -270,7 +244,7 @@
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource
                                             AncestorType={x:Type ToggleButton}}}" Value="true">
-                                                    <Setter Property="Image.Source" Value="Images/check (2).png"/>
+                                                    <Setter Property="Image.Source" Value="Images/check(2).png"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
@@ -282,12 +256,12 @@
                     </ControlTemplate>
                 </ToggleButton.Template>
             </ToggleButton>
-            <ToggleButton Name="cinnamon" Height="50" Width="250" HorizontalAlignment="Left" Margin="50,0,0,0" Content="Корица" Foreground="White" FontSize="23">
+            <ToggleButton Name="ToggleCinnamon" Height="50" Width="250" HorizontalAlignment="Left" Margin="50,0,0,0" Content="Корица" Foreground="White" FontSize="23">
                 <ToggleButton.Template>
                     <ControlTemplate TargetType="{x:Type ToggleButton}">
                         <StackPanel Orientation="Horizontal">
                             <Border Height="35" Width="35" CornerRadius="4" HorizontalAlignment="Left"
-                        BorderThickness="1" Background="#1e1c2a">
+                                    BorderThickness="1" Background="#1e1c2a">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="BorderBrush" Value="#FF333842"/>
@@ -318,7 +292,7 @@
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource
                                             AncestorType={x:Type ToggleButton}}}" Value="true">
-                                                    <Setter Property="Image.Source" Value="Images/check (2).png"/>
+                                                    <Setter Property="Image.Source" Value="Images/check(2).png"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
@@ -330,12 +304,12 @@
                     </ControlTemplate>
                 </ToggleButton.Template>
             </ToggleButton>
-            <ToggleButton Name="sirop" Height="50" Width="250" HorizontalAlignment="Left" Margin="50,0,0,0" Content="Сироп +15₽" Foreground="White" FontSize="23">
+            <ToggleButton Name="ToggleSirop" Height="50" Width="250" HorizontalAlignment="Left" Margin="50,0,0,0" Content="Сироп +15₽" Foreground="White" FontSize="23" Click="ToggleSirop_Click">
                 <ToggleButton.Template>
                     <ControlTemplate TargetType="{x:Type ToggleButton}">
                         <StackPanel Orientation="Horizontal">
                             <Border Height="35" Width="35" CornerRadius="4" HorizontalAlignment="Left"
-                        BorderThickness="1" Background="#1e1c2a">
+                                    BorderThickness="1" Background="#1e1c2a">
                                 <Border.Style>
                                     <Style TargetType="{x:Type Border}">
                                         <Setter Property="BorderBrush" Value="#FF333842"/>
@@ -366,7 +340,7 @@
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding IsChecked, RelativeSource={RelativeSource
                                             AncestorType={x:Type ToggleButton}}}" Value="true">
-                                                    <Setter Property="Image.Source" Value="Images/check (2).png"/>
+                                                    <Setter Property="Image.Source" Value="Images/check(2).png"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
@@ -379,9 +353,8 @@
                 </ToggleButton.Template>
             </ToggleButton>
             <StackPanel Orientation="Horizontal">
-                <Button Height="50" Width="208"  Margin="30,25,20,0">
-
-                    <StackPanel Orientation="Horizontal" Width="172">
+                <Button x:Name="BtnAdd" Height="50" Width="208"  Margin="30,25,20,0" Click="BtnAdd_Click" Background="#c4c1d6" BorderThickness="0">
+                    <StackPanel Orientation="Horizontal" Width="160">
                         <Image Source="/Images/add-to-cart.png" Height="36" Width="36" Margin="0,0,0,0" HorizontalAlignment="Left"/>
                         <TextBlock Text="Добавить" 
                                    Foreground="Black"
@@ -392,13 +365,13 @@
                 </Button>
                 <Grid>
                     <Rectangle Fill="#1e1c2a" HorizontalAlignment="Center" Height="54" Margin="0,27,0,0" VerticalAlignment="Top" Width="155" RadiusY="27" RadiusX="27"/>
-                    <Button Name="btn_Num" Content="0" HorizontalAlignment="Center" Height="45" Margin="0,32,0,0" VerticalAlignment="Top" Width="45" Style="{DynamicResource ButtonStyle1}" Foreground="#FFF7F7F7" FontSize="20" Padding="0,-2,0,0"/>
-                    <Button Name="btn_MinNum" Content="___" HorizontalAlignment="Left" Height="36" Margin="10,36,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource ButtonStyle2}" Foreground="White" FontSize="11" FontWeight="Bold" FontFamily="Segoe UI Black" Click="btn_MinNum_Click"/>
-                    <Button Name="btn_PlusNum" Content="+" HorizontalAlignment="Left" Height="36" Margin="108,36,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource ButtonStyle3}" Foreground="White" FontSize="18" Click="btn_PlusNum_Click"/>
+                    <Button Name="btn_Num" Content="1" HorizontalAlignment="Center" Height="45" Margin="0,32,0,0" VerticalAlignment="Top" Width="45" Style="{DynamicResource ButtonStyle1}" Foreground="#FFF7F7F7" FontSize="20" Padding="0,2,0,0"/>
+                    <Button Name="btn_MinNum" Content="___" HorizontalAlignment="Left" Height="36" Margin="10,36,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource ButtonStyle2}" Foreground="White" FontSize="11" FontWeight="Bold" FontFamily="Segoe UI Black" Click="Btn_MinNum_Click"/>
+                    <Button Name="btn_PlusNum" Content="+" HorizontalAlignment="Left" Height="36" Margin="108,36,0,0" VerticalAlignment="Top" Width="36" Style="{DynamicResource ButtonStyle3}" Foreground="White" FontSize="18" FontFamily="Segoe UI" Click="Btn_PlusNum_Click"/>
                 </Grid>
                 <StackPanel Orientation="Vertical">
-                    <Label Name="Sub" Content="Сумма" HorizontalContentAlignment="Center" Width="300" Height="37" Foreground="White" Margin="100,20,0,0" FontSize="20"/>
-                    <Label Name="Amount" Content="0" HorizontalContentAlignment="Center" Width="300" Height="35" Foreground="White" Margin="100,-15,0,0" FontSize="20"/>
+                    <Label Name="Sub" Content="Сумма" HorizontalContentAlignment="Center" Width="192" Height="37" Foreground="White" Background="Transparent" Margin="200,20,0,0" FontSize="23" BorderThickness="0"/>
+                    <Label Name="Amount" Content="0" HorizontalContentAlignment="Center" Width="192" Height="35" Foreground="White" Background="Transparent" Margin="200,-15,0,0" FontSize="23" BorderThickness="0"/>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
