@@ -8,7 +8,6 @@ namespace CoffeeSh0p
 {
     static class Controller
     {
-        public static string drinksListed = "";
         public static ArrayList coffeeList = new ArrayList();
         public static void AddInList(Coffee coffee)
         {
@@ -19,19 +18,18 @@ namespace CoffeeSh0p
             string drinksListed="";
             foreach (Coffee coffee in Controller.coffeeList)
             {
-                drinksListed += "[" + coffee.quantity + "x]" + " " + coffee.coffeeName + ", " + coffee.sugar + ", " + coffee.cinnamon + ", " + coffee.sirop+"\n";
+                drinksListed += "[" + coffee.quantity + "x]" + " " + coffee.coffeeName + ", " + coffee.sugar + ", " + coffee.cinnamon + ", " + coffee.sirop + "\n"; ;
             }
             OrderWindow orderWindow = new OrderWindow();
             string typeOfD;
             if (RB) { typeOfD = "В зале"; } else { typeOfD = "С собой"; }
             Order order = new Order(drinksListed, orderWindow.bill, typeOfD, datetime, clientName);
             SendOrder(order);
-            
         }
 
         public static void SendOrder(Order order)
         {
-            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.1.41:5000/order");
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://192.168.56.1:5000/order");
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
             try
@@ -49,7 +47,6 @@ namespace CoffeeSh0p
 
                     streamWriter.Write(json);
                 }
-
 
                 var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))

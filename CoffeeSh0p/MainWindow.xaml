@@ -59,7 +59,7 @@
                    HorizontalAlignment="Left"
                    Margin="0,0,0,20"/>
                     <StackPanel Orientation="Horizontal">
-                        <Button x:Name="btn" Background="Transparent" BorderThickness="0" Click="btn_Click" Style="{x:Null}">
+                        <Button x:Name="btn" Background="Transparent" BorderThickness="0" Click="Btn_Click" Style="{x:Null}">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -94,7 +94,7 @@
                                 </Grid>
                             </Border>
                         </Button>
-                        <Button x:Name="btn2" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="btn2_Click" Style="{x:Null}">
+                        <Button x:Name="btn2" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="Btn2_Click" Style="{x:Null}">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -130,7 +130,7 @@
                                 </Grid>
                             </Border>
                         </Button>
-                        <Button x:Name="btn3" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="btn3_Click" Style="{x:Null}">
+                        <Button x:Name="btn3" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="Btn3_Click" Style="{x:Null}">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -168,7 +168,7 @@
                         </Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                        <Button x:Name="btn4" Background="Transparent" BorderThickness="0" Margin="0,0,0,0" Click="btn4_Click" Style="{x:Null}">
+                        <Button x:Name="btn4" Background="Transparent" BorderThickness="0" Margin="0,0,0,0" Click="Btn4_Click" Style="{x:Null}">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -203,7 +203,7 @@
                                 </Grid>
                             </Border>
                         </Button>
-                        <Button x:Name="btn5" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="btn5_Click" Style="{x:Null}">
+                        <Button x:Name="btn5" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="Btn5_Click" Style="{x:Null}">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -239,7 +239,7 @@
                                 </Grid>
                             </Border>
                         </Button>
-                        <Button x:Name="btn6" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="btn6_Click" Style="{x:Null}">
+                        <Button x:Name="btn6" Background="Transparent" BorderThickness="0" Margin="15,0,0,0" Click="Btn6_Click" Style="{x:Null}">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -277,7 +277,7 @@
                         
                     </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
-                            <Button x:Name="btn7" Background="Transparent" BorderThickness="0" Margin="0,0,0,0" Click="btn7_Click" Style="{x:Null}">
+                            <Button x:Name="btn7" Background="Transparent" BorderThickness="0" Margin="0,0,0,0" Click="Btn7_Click" Style="{x:Null}">
                                 <Button.Resources>
                                     <Style TargetType="Border">
                                         <Setter Property="CornerRadius" Value="10"/>

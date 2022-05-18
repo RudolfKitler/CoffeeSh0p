@@ -2,10 +2,6 @@
 
 namespace CoffeeSh0p
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
-
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -14,7 +10,7 @@ namespace CoffeeSh0p
             if (Controller.coffeeList.Count != 0) { BtnGetOrder.IsEnabled = true; }
         }
 
-        private void btn_Click(object sender, RoutedEventArgs e)
+        private void Btn_Click(object sender, RoutedEventArgs e)
         {
             string selectedDrink = "Капучино";
             string volume = "300 мл";
@@ -23,11 +19,9 @@ namespace CoffeeSh0p
             ItemWindow itemWindow = new ItemWindow(selectedDrink, volume, imageSource, price);
             itemWindow.Show();
             this.Close();
-            
-
         }
 
-        private void btn2_Click(object sender, RoutedEventArgs e)
+        private void Btn2_Click(object sender, RoutedEventArgs e)
         {
             string selectedDrink = "Капучино XL";
             string volume = "400 мл";
@@ -38,7 +32,7 @@ namespace CoffeeSh0p
             this.Close();
         }
 
-        private void btn3_Click(object sender, RoutedEventArgs e)
+        private void Btn3_Click(object sender, RoutedEventArgs e)
         {
             string selectedDrink = "Латте";
             string volume = "300 мл";
@@ -49,7 +43,7 @@ namespace CoffeeSh0p
             this.Close();
         }
 
-        private void btn4_Click(object sender, RoutedEventArgs e)
+        private void Btn4_Click(object sender, RoutedEventArgs e)
         {
             string selectedDrink = "Латте XL";
             string volume = "400 мл";
@@ -60,7 +54,7 @@ namespace CoffeeSh0p
             this.Close();
         }
 
-        private void btn5_Click(object sender, RoutedEventArgs e)
+        private void Btn5_Click(object sender, RoutedEventArgs e)
         {
             string selectedDrink = "Мокачино";
             string volume = "300 мл";
@@ -71,7 +65,7 @@ namespace CoffeeSh0p
             this.Close();
         }
 
-        private void btn6_Click(object sender, RoutedEventArgs e)
+        private void Btn6_Click(object sender, RoutedEventArgs e)
         {
             string selectedDrink = "Мокачино XL";
             string volume = "400 мл";
@@ -81,7 +75,16 @@ namespace CoffeeSh0p
             itemWindow.Show();
             this.Close();
         }
-
+         private void Btn7_Click(object sender, RoutedEventArgs e)
+                {
+                    string selectedDrink = "Флэт Уайт";
+                    string volume = "200 мл";
+                    string imageSource = "/Images/flatwhite.png";
+                    int price = 190;
+                    ItemWindow itemWindow = new ItemWindow(selectedDrink, volume, imageSource, price);
+                    itemWindow.Show();
+                    this.Close();
+                }
         private void BtnGetOrder_Click(object sender, RoutedEventArgs e)
         {
             OrderWindow orderWindow = new OrderWindow();
@@ -94,15 +97,6 @@ namespace CoffeeSh0p
             Application.Current.Shutdown();
         }
 
-        private void btn7_Click(object sender, RoutedEventArgs e)
-        {
-            string selectedDrink = "Флэт Уайт";
-            string volume = "200 мл";
-            string imageSource = "/Images/flatwhite.png";
-            int price = 190;
-            ItemWindow itemWindow = new ItemWindow(selectedDrink, volume, imageSource, price);
-            itemWindow.Show();
-            this.Close();
-        }
+       
     }
 }

@@ -9,7 +9,7 @@ namespace CoffeeSh0p
     public partial class OrderWindow : Window
     {
         public int bill = 0;
-        public string clientName;
+       
         DateTime DateStart;
         
         public OrderWindow()
